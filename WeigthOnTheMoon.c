@@ -6,7 +6,7 @@ int main() {
     printf ("Please enter your weigth in kilos:\n");
     scanf("%f", &fVariableWeigth);
     
-    fVariableWeigthOnMoon = (fVariableWeigth / 100) * 83;
+    fVariableWeigthOnMoon = (fVariableWeigth / 100) * 17;
     printf ("\nYour weigth on the moon will be: %f", fVariableWeigthOnMoon);
     return 0;
 }
