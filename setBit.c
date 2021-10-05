@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int setBit(int num, int i) {
+int setBit(char num, int i) {
     return (num | (1 << i));
 }
 
 int main() {
-    int input = 0;
+    char input = 0;
     int index = 0;
     printf("Please enter your char/number:\n");
     scanf("%d", &input);
