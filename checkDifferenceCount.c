@@ -13,7 +13,7 @@ int checkDifferenceCount(unsigned int inputOne, unsigned int inputTwo) {
 }
 
 int main() {
-    unsigned int inputOne = 0, inputTwo = 0;
+    unsigned char inputOne = 0, inputTwo = 0;
     printf("Please enter the first byte:\n");
     scanf("%u", &inputOne);
 
