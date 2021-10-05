@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int bitAt(int num, int i){
+int bitAt(char num, int i){
     return (num >> i) & 1 ? 1 : 0;
 }
 
 int main() {
-    int input = 0;
+    char input = 0;
     int index = 0;
     printf("Please enter your char/number:\n");
     scanf("%d", &input);
