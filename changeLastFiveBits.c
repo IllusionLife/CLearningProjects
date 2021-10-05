@@ -7,7 +7,7 @@ int changeLastFiveBits(char num) {
 }
 
 int main() {
-    long input = 0;
+    char input = 0;
 
     printf("Please enter your char/number:\n");
     scanf("%d", &input);
