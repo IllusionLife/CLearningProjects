@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int reverseBit(int num, int i) {
+int reverseBit(char num, int i) {
     if ((num >> i) & 1 == 1) {
         return (num & ~(1 << i));
     }
@@ -10,7 +10,7 @@ int reverseBit(int num, int i) {
 }
 
 int main() {
-    int input = 0;
+    char input = 0;
     int index = 0;
     printf("Please enter your char/number:\n");
     scanf("%d", &input);
