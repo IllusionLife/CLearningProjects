@@ -2,11 +2,12 @@
 
 int main() {
 
-char test[] = {0xAA, 0xAA, 0xAA, 0xAA};
+    float a = 0xAAAAAAAA;
+    int b = 0xAAAAAAAA;
+    unsigned int c = 0xAAAAAAAA;
 
-    printf("Char: %c\n", test[0]);
-    printf("float: %f\n", test[1]);
-    printf("Int: %d\n", test[2]);
-    printf("Unsigned: %u\n", test[3]);
+    printf("float: %f\n", a);
+    printf("Int: %d\n", b);
+    printf("Unsigned: %u\n", c);
     return 0;
 }
