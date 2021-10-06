@@ -2,7 +2,7 @@
 
 int main() {
     const char differenceUppertoLowercase = ('a' - 'A');
-    char s1[40] = "WASSUP";
+    char s1[] = "WASSUP";
 
 
     for (int i = 0; s1[i] !='\0'; i++) {
