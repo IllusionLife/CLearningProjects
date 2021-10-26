@@ -43,24 +43,44 @@ void sortInsertion(int* array, int arrSize) {
     printf("Total time to sort %d items using Insertion Sort is: %.0lf\n", arrSize, totalTime);
 }
 
-int main() {
-    int arr1[ARR_SIZE1];
-    int arr2[ARR_SIZE1];
-    int arr3[ARR_SIZE1];
-    int arr4[ARR_SIZE1];
-    int arr5[ARR_SIZE5];
-    int arrRes1[ARR_SIZE1];
-    int arrRes2[ARR_SIZE1];
-    int arrRes3[ARR_SIZE1];
-    int arrRes4[ARR_SIZE1];
-    int arrRes5[ARR_SIZE5];
+void sortFlagBubble(int *arr, int arrSize)
+{
+    clock_t beginTime = clock();
+    int didSwap = 1;
+    while (didSwap)
+    {
+        didSwap = 0;
+        for (int i = 0, j = 1; i < (arrSize - 1); i++, j++)
+        {
+            int iCondDescending = ((1 == -1) && (*(arr + i) < *(arr + j)));
+            int iCondAscending = ((1 == 1) && (*(arr + i) > *(arr + j)));
 
+            if (iCondDescending || iCondAscending)
+            {
+                int iTemp = *(arr + i);
+                *(arr + i) = *(arr + j);
+                *(arr + j) = iTemp;
+                didSwap = 1;
+            }
+        }
+    }
+    clock_t endTime = clock();
+    double totalTime = (double)(endTime - beginTime) / CLOCKS_PER_SEC;
+    printf("Total time to sort %d items using Flagged Bubble Sort is: %.0lf\n", arrSize, totalTime);
+}
+
+int main() {
+    int arr5[ARR_SIZE5];
+    int arr5Second[ARR_SIZE5];
+    int arr5Third[ARR_SIZE5];
 
     srand(time(0));
     for (int i = 0; i < ARR_SIZE5; i++) {
         arr5[i] = rand() % 100000;
-        arrRes5[i] = arr5[i];
+        arr5Second[i] = arr5[i];
+        arr5Third[i] = arr5[i];
     }
     sortBubble(arr5, ARR_SIZE5);
-    sortInsertion(arrRes5, ARR_SIZE5);
+    sortFlaggedBubble(arr5Second, ARR_SIZE5);
+    sortInsertion(arr5Third, ARR_SIZE5);
 }
