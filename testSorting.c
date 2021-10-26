@@ -81,6 +81,6 @@ int main() {
         arr5Third[i] = arr5[i];
     }
     sortBubble(arr5, ARR_SIZE5);
-    sortFlaggedBubble(arr5Second, ARR_SIZE5);
+    sortFlagBubble(arr5Second, ARR_SIZE5);
     sortInsertion(arr5Third, ARR_SIZE5);
 }
